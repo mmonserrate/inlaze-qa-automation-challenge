@@ -111,3 +111,4 @@ def step_impl(context):
     except WebDriverException:
         print('Element is not clickable')
         assert True
+

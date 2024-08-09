@@ -19,7 +19,57 @@ Feature: Registro de usuario
     When Hacer click en el enlace Sign up
     Then Verificar que se abre el formulario sign up en la url "https://test-qa.inlaze.com/auth/sign-up"
     Then Ingresar el nombre "Juan" en el campo "Full name"
+    Then Ingresar "juan.perez01@example.com" en el campo "Email"
+    Then Ingresar "Password123!" en el campo "Password"
+    Then Confirmar la contrasena "Password123!" en el campo "Repeat your password"
+    Then Verificar que el boton "SIGN UP" no es clickeable
+
+  Scenario: Registros de usuario - CP003: Registro de usuario con formato de email invalido
+    When Hacer click en el enlace Sign up
+    Then Verificar que se abre el formulario sign up en la url "https://test-qa.inlaze.com/auth/sign-up"
+    Then Ingresar el nombre "Juan Pérez" en el campo "Full name"
+    Then Ingresar "juan.perez-example.com" en el campo "Email"
+    Then Ingresar "Password123!" en el campo "Password"
+    Then Confirmar la contrasena "Password123!" en el campo "Repeat your password"
+    Then Verificar que el boton "SIGN UP" no es clickeable
+    Then Ingresar "juan.perez@examplecom" en el campo "Email"
+    Then Verificar que el boton "SIGN UP" no es clickeable
+    Then Ingresar "12juan.perez@example.com" en el campo "Email"
+    Then Verificar que el boton "SIGN UP" no es clickeable
+
+  Scenario: Registros de usuario - CP004: Registro de usuario con email existente
+    When Hacer click en el enlace Sign up
+    Then Verificar que se abre el formulario sign up en la url "https://test-qa.inlaze.com/auth/sign-up"
+    Then Ingresar el nombre "Juan Pérez" en el campo "Full name"
+    # El email debe existir previamente en la BD
     Then Ingresar "juan.perez@example.com" en el campo "Email"
     Then Ingresar "Password123!" en el campo "Password"
     Then Confirmar la contrasena "Password123!" en el campo "Repeat your password"
+    Then Verificar que el boton "SIGN UP" no es clickeable
+
+  Scenario: Registros de usuario - CP005: Registro de usuario con contrasena que no cumple requisitos
+    When Hacer click en el enlace Sign up
+    Then Verificar que se abre el formulario sign up en la url "https://test-qa.inlaze.com/auth/sign-up"
+    Then Ingresar el nombre "Juan Pérez" en el campo "Full name"
+    Then Ingresar "pedro.perez@example.com" en el campo "Email"
+    Then Ingresar "Password1" en el campo "Password"
+    Then Confirmar la contrasena "Password1" en el campo "Repeat your password"
+    Then Verificar que el boton "SIGN UP" no es clickeable
+    Then Ingresar "password123!" en el campo "Password"
+    Then Confirmar la contrasena "password123!" en el campo "Repeat your password"
+    Then Verificar que el boton "SIGN UP" no es clickeable
+    Then Ingresar "PASSWORD123!" en el campo "Password"
+    Then Confirmar la contrasena "PASSWORD123!" en el campo "Repeat your password"
+    Then Verificar que el boton "SIGN UP" no es clickeable
+    Then Ingresar "Pa12!" en el campo "Password"
+    Then Confirmar la contrasena "Pa12!" en el campo "Repeat your password"
+    Then Verificar que el boton "SIGN UP" no es clickeable
+
+  Scenario: Registros de usuario - CP006: Registro de usuario con contrasena y confirmacion no coincidentes
+    When Hacer click en el enlace Sign up
+    Then Verificar que se abre el formulario sign up en la url "https://test-qa.inlaze.com/auth/sign-up"
+    Then Ingresar el nombre "Carmen Pérez" en el campo "Full name"
+    Then Ingresar "carmen.perez@example.com" en el campo "Email"
+    Then Ingresar "Password1123!" en el campo "Password"
+    Then Confirmar la contrasena "Password1123#" en el campo "Repeat your password"
     Then Verificar que el boton "SIGN UP" no es clickeable
