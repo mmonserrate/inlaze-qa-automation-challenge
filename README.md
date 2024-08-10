@@ -35,18 +35,30 @@ Clonar el proyecto desde gitlab (Requiere tener git instalado - https://git-scm.
 ```bash
   git clone https://github.com/mmonserrate/inlaze-qa-automation-challenge.git
 ```
-Moverse al branch master
 
-```bash
-  git checkout master
-```
 Ir al directorio de fuentes del proyecto 
 
 ```bash
   cd inlaze-qa-automation-challenge/src
 ```
+Moverse al branch master
 
-Instalar las bibliotecas de Python requeridas por el proyectoÑ
+```bash
+  git checkout master
+```
+Instalar behave
+
+```bash
+pip install behave
+```
+
+Instalar selenium
+
+```bash
+pip install selenium
+```
+
+Instalar las bibliotecas de Python requeridas por el proyecto
 
 ```bash
 pip download -r requirements.txt
@@ -69,10 +81,10 @@ Donde browser es nombre del browser donde se desea correr la prueba y feature es
 **Examples:**
 
 ```bash
-  $ python test_stori_challenge.py --browser chrome --feature SignUp
+  $ python test_inlaze_challenge.py --browser chrome --feature SignUp
 ```
 ```bash
-  $ python test_stori_challenge.py --browser firefox --feature All
+  $ python test_inlaze_challenge.py --browser firefox --feature All
 ```
 
 ## Features y casos considerados en estas pruebas 
