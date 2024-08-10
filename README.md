@@ -3,6 +3,14 @@
 
 Este Challenge es parte del proceso de selección para QA Automation Engineer en Inlaze
 
+## Tecnologías implementadas:
+* Python v3.9.6
+* pip v21.1.3
+* Behave v1.2.6
+* selenium v4.23.1
+
+
+
 ## Instalacion
 
 Descargar e instalar el interprete de python desde el siguiente link:
