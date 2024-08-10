@@ -87,3 +87,5 @@ Feature: Registro de usuario
     Then Confirmar la contrasena "Password1123!" en el campo "Repeat your password"
     Then Click en el boton "SIGN UP"
     Then Redirigir a la pagina "Sign in" en la url "https://test-qa.inlaze.com/auth/sign-in"
+
+
