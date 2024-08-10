@@ -101,6 +101,12 @@ Donde browser es nombre del browser donde se desea correr la prueba y feature es
     - Al ingresar a la plataforma, debe mostrarse el nombre del usuario.
     - La plataforma debe permitir al usuario cerrar la sesión.
 
+## Casos de prueba y reporte de bugs
+Se incluyen los siguientes archivos como parte de la ejecución de las pruebas funcionales y automatizadas:
+* CP-LOGIN-USUARIO.xlsx
+* CP-REGISTRO-USUARIO.xlsx
+* REPORTE-BUGS.docx
+
 
 ## Authors
 
