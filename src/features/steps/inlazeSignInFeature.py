@@ -1,8 +1,7 @@
 # Created by Maria Monserrate at 08/09/2024
 import time
 from behave import *
-from selenium import webdriver
-from selenium.common import TimeoutException, WebDriverException
+from selenium.common import WebDriverException
 from selenium.webdriver.common.by import By
 
 
